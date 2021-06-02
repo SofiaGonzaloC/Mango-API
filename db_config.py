@@ -7,6 +7,6 @@ DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_NAME = os.getenv("DB_NAME")
 
 client = pymongo.MongoClient(f"mongodb+srv://{DB_USER}:{DB_PASSWORD}@db-example.pptb0.mongodb.net/{DB_NAME}?retryWrites=true&w=majority")
-db = client.test
 
-db = client.Badge
+#Down here you need to add the collection name
+db = client.Badges
