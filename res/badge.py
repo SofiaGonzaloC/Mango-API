@@ -22,8 +22,8 @@ class Badge(Resource):
                 'city': request.json['city'],
                 'followers': request.json['followers'],
                 'likes': request.json['likes'],
-                'post': request.json['post'],
-                'posts':request.json['posts']
+                'post': request.json['post']
+                # 'posts':request.json['posts']
             }
         ).inserted_id)
 
@@ -44,8 +44,8 @@ class Badge(Resource):
                 'city': response['city'],
                 'followers': response['followers'],
                 'likes': response['likes'],
-                'post': response['post'],
-                'posts':response['posts']
+                'post': response['post']
+                # 'posts':response['posts']
                 }
             }
         )
