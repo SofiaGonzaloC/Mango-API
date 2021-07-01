@@ -55,7 +55,7 @@ class Badge(Resource):
 
     def delete(self, by, data):
         response = self.abort_if_not_exist(by, data)
-        database.db.Badges.delete_one({'_id':['_id']})
+        database.db.Badges.delete_one({'_id':response['_id']})
         response['_id'] = str(response['_id'])
         return jsonify({"deleted":response})
 
