@@ -56,28 +56,28 @@ class Badges(Resource):
                 'followers': request.json[3]['followers'],
                 'likes': request.json[3]['likes'],
                 'post': request.json[3]['post']
+                },
+               {
+                'header_img_url': request.json[4]['header_img_url'],
+                'profile_picture_url': request.json[4]['profile_picture_url'],
+                'name': request.json[4]['name'],
+                'age': request.json[4]['age'],
+                'city': request.json[4]['city'],
+                'followers': request.json[4]['followers'],
+                'likes': request.json[4]['likes'],
+                'post': request.json[4]['post']
+                },
+               {
+                'header_img_url': request.json[5]['header_img_url'],
+                'profile_picture_url': request.json[5]['profile_picture_url'],
+                'name': request.json[5]['name'],
+                'age': request.json[5]['age'],
+                'city': request.json[5]['city'],
+                'followers': request.json[5]['followers'],
+                'likes': request.json[5]['likes'],
+                'post': request.json[5]['post']
                 }
-            #   {
-            #     'header_img_url': request.json[4]['header_img_url'],
-            #     'profile_picture_url': request.json[4]['profile_picture_url'],
-            #     'name': request.json[4]['name'],
-            #     'age': request.json[4]['age'],
-            #     'city': request.json[4]['city'],
-            #     'followers': request.json[4]['followers'],
-            #     'likes': request.json[4]['likes'],
-            #     'post': request.json[4]['post']
-            #     },
-            #    {
-            #     'header_img_url': request.json[5]['header_img_url'],
-            #     'profile_picture_url': request.json[5]['profile_picture_url'],
-            #     'name': request.json[5]['name'],
-            #     'age': request.json[5]['age'],
-            #     'city': request.json[5]['city'],
-            #     'followers': request.json[5]['followers'],
-            #     'likes': request.json[5]['likes'],
-            #     'post': request.json[5]['post']
-            #     }
-            
+
         ]).inserted_ids)
 
         results = []
