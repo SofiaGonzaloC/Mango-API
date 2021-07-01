@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, request
-from flask.wrappers import Response
 from flask_restful import Resource, abort
 from flask_pymongo import pymongo
 from bson.json_util import ObjectId
@@ -10,7 +9,7 @@ class Posts (Resource):
 
     def get(self, _id):
         response = self.abort_if_not_exist(_id)
-        response['_id'] = str(Response['_id'])
+        response['_id'] = str(response['_id'])
         return jsonify(response)
 
     def post(self, _id):
@@ -35,11 +34,11 @@ class Posts (Resource):
             "posts.$.img": request.json["date"],
         }})
 
-        return jsonify(rquest, json)
+        return jsonify(request, json)
 
     def delete(self, _id, uuid):
         response = self.abort_if_not_exist(_id)
-        database.db.Badges.update_one({"id": ObjectId(_id)},
+        database.db.Badges.update_one({"_id": ObjectId(_id)},
         {"$pull":{
             "posts": {"id": uuid}
         }})
